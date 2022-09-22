@@ -1,0 +1,14 @@
+{
+    "login": {
+        "title": "Inicio de sesión",
+        "login": "Iniciar sesión"
+    },
+    "signup": {
+        "title": "Registro",
+        "signup": "Regístrate"
+    },
+    "username": "Usuario",
+    "password": "Contraseña",
+    "email": "Correo electrónico",
+    "welcome": "Bienvenido"
+}
