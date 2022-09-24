@@ -6,7 +6,7 @@ This project was bootstrapped with [Vite](https://github.com/vitejs/vite/tree/ma
 
 In the project directory, you can run:
 
-### `npx vite` or `npm run dev`
+### `npm start` or `npx vite` or `npm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
