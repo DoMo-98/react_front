@@ -4,11 +4,11 @@ import '../App.css'
 import { useState, useEffect } from 'react';
  
 export default () => {
-  const [t, i18n] = useTranslation("global");
+  const { t } = useTranslation("global");
   const [test, setTest] = useState('')
 
   const location = useLocation()
-  const { username, password } = location.state ?? {}
+  const { username } = location.state ?? {}
 
   useEffect(() => {
     // GET request using fetch inside useEffect React hook

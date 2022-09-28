@@ -8,7 +8,11 @@
         "signup": "Regístrate"
     },
     "username": "Usuario",
-    "password": "Contraseña",
+    "password": {
+        "password": "Contraseña",
+        "confirm": "Confirmación"
+    },
     "email": "Correo electrónico",
+    
     "welcome": "Bienvenido"
 }

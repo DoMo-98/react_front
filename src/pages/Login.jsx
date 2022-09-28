@@ -1,23 +1,19 @@
-import { Input, Spacer } from "@nextui-org/react";
 import { useState } from 'react';
-import { useTranslation } from "react-i18next";
-import { Button } from "@nextui-org/react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import { Button, TextField, Link, Grid } from '@mui/material';
 
 import reactLogo from '../assets/react.svg'
 import '../App.css'
+import Language from '../components/Language';
+import TextFieldPassword from '../components/TextFieldPassword';
 
 export default function Login() {
-  const [t, i18n] = useTranslation("global");
   const navigate = useNavigate();
+  const { t } = useTranslation("global");
 
   const [username, setUsername] = useState(useLocation().state ?? '')
   const [password, setPassword] = useState('')
-
-  function changeLanguage(lan) {
-    i18n.changeLanguage(lan)
-    localStorage.setItem('lng', lan)
-  }
 
   return (
     <div>
@@ -31,24 +27,39 @@ export default function Login() {
       </div>
       <h1>{t("login.title")}</h1>
       <div className="card">
-        <div>
-          <Input clearable placeholder={t("username")} onChange={e => setUsername(e.target.value)} value={username}/>
-          <Spacer y={1}/>
-          <Input clearable placeholder={t("password")} onChange={e => setPassword(e.target.value)} value={password} type="password"/>
-          <Spacer y={1}/>
-          <button onClick={() => { navigate('/test', { state: { username, password } }) }}>{t("login.login")}</button>
-        </div>
+        <Grid container spacing={2} direction="column" justifyContent="flex-start" alignItems="stretch">
+          <Grid item>
+            <TextField 
+              fullWidth 
+              label={t("username")} 
+              onChange={e => setUsername(e.target.value)} 
+              value={username} 
+            />
+          </Grid>
+          
+          <Grid item>
+            <TextFieldPassword label={t("password.password")} /> {/* TODO: ??? setPassword={setPassword} */}
+          </Grid>
 
-        <div>
-          <Link to="/signup">{t("signup.signup")}</Link>
-        </div>
-        
-        {/* TODO: movilizar a todas las pantallas de alguna forma eficiente 
-                  y hacer que se guarde en el local storage (para que al refrescar se mantenga el idioma seleccionado) */}
-        <Button.Group ghost>
-          <Button onClick={() => changeLanguage("en")}>EN</Button>
-          <Button onClick={() => changeLanguage("es")}>ES</Button>
-        </Button.Group>
+          <Grid item>
+            <Button 
+              variant="outlined" 
+              onClick={() => { navigate('/test', { state: { username/* TODO: ??? , password */ } }) }}
+              // href="#" // TODO: This is rerendering the page, but it should not
+            >{t("login.login")}</Button>
+          </Grid>
+
+          <Grid item>
+            {/* TODO: I'm not sure if this is the best way to do it */}
+            {/*       href="#" is rerendering the page, but maybe it should not */}
+            <Link onClick={() => navigate("/signup")} href="#">{t("signup.signup")}</Link>
+          </Grid>
+
+          <Grid item>
+            {/* TODO: movilizar a todas las pantallas de alguna forma eficiente*/}
+            <Language />
+          </Grid>
+        </Grid>
       </div>
     </div>
   )

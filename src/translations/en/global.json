@@ -8,7 +8,11 @@
         "signup": "Sign Up"
     },
     "username": "Username",
-    "password": "Password",
+    "password": {
+        "password": "Password",
+        "confirm": "Confirm"
+    },
     "email": "Email",
+    
     "welcome": "Welcome"
 }
