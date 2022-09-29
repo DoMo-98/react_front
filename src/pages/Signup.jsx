@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { Button, Grid, Link, TextField } from "@mui/material";
 
 import reactLogo from '../assets/react.svg'
 import '../App.css'
-import Language from "../components/Language";
-import { Button, Grid, Link, TextField } from "@mui/material";
-import TextFieldPassword from "../components/TextFieldPassword";
+import { Language, TextFieldPassword } from "../components";
 
 export default function Signup() {
   const [t, i18n] = useTranslation("global");
@@ -75,7 +74,6 @@ export default function Signup() {
           </Grid>
 
           <Grid item>
-            {/* TODO: movilizar a todas las pantallas de alguna forma eficiente*/}
             <Language />
           </Grid>
         </Grid>

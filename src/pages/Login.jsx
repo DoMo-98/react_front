@@ -5,8 +5,7 @@ import { Button, TextField, Link, Grid } from '@mui/material';
 
 import reactLogo from '../assets/react.svg'
 import '../App.css'
-import Language from '../components/Language';
-import TextFieldPassword from '../components/TextFieldPassword';
+import { Language, TextFieldPassword } from '../components';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -56,7 +55,6 @@ export default function Login() {
           </Grid>
 
           <Grid item>
-            {/* TODO: movilizar a todas las pantallas de alguna forma eficiente*/}
             <Language />
           </Grid>
         </Grid>

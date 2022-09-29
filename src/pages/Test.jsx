@@ -1,7 +1,8 @@
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from "react-i18next";
-import '../App.css'
 import { useState, useEffect } from 'react';
+
+import '../App.css'
  
 export default () => {
   const { t } = useTranslation("global");

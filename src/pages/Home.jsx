@@ -1,5 +1,4 @@
 import { Grid, Card, Text } from "@nextui-org/react";
-import '../css/Home.css';
 
 export default function Home() {
   const MockItem = ({ text }) => {

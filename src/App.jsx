@@ -1,10 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
 import './App.css'
-import Login from "./pages/Login";
-import Test from './pages/Test';
-import Signup from "./pages/Signup";
-import Menu from "./components/Menu";
-import Home from "./pages/Home";
+import { Home, Login, Signup, Test } from "./pages";
+import { Menu } from "./components";
 
 export default function App() {
   return (
