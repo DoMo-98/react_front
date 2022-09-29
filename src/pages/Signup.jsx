@@ -8,18 +8,13 @@ import '../App.css'
 import { Language, TextFieldPassword } from "../components";
 
 export default function Signup() {
-  const [t, i18n] = useTranslation("global");
+  const { t } = useTranslation("global");
   const navigate = useNavigate();
 
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirm_password, setConfirmPassword] = useState('')
-
-  function changeLanguage(lan) {
-    i18n.changeLanguage(lan)
-    localStorage.setItem('lng', lan)
-  }
 
   return (
     <div>
