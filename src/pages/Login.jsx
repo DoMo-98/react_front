@@ -37,7 +37,9 @@ export default function Login() {
           </Grid>
           
           <Grid item>
-            <TextFieldPassword label={t("password.password")} /> {/* TODO: ??? setPassword={setPassword} */}
+            {/* TODO: Uncomment when solve the problem with import of @mui/icons-material */}
+            {/* <TextFieldPassword label={t("password.password")} /> TODO: ??? setPassword={setPassword} */}
+            <TextField label={t("password.password")} type="password" fullWidth />
           </Grid>
 
           <Grid item>

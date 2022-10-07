@@ -47,11 +47,15 @@ export default function Signup() {
           </Grid>
           
           <Grid item>
-            <TextFieldPassword label={t("password.password")} /> {/* TODO: ??? setPassword={setPassword} */}
+            {/* TODO: Uncomment when solve the problem with import of @mui/icons-material */}
+            {/* <TextFieldPassword label={t("password.password")} /> TODO: ??? setPassword={setPassword} */}
+            <TextField label={t("password.password")} type="password" fullWidth />
           </Grid>
           
           <Grid item>
-            <TextFieldPassword label={t("password.confirm")} /> {/*TODO: ??? setPassword={setConfirmPassword} */}
+            {/* TODO: Uncomment when solve the problem with import of @mui/icons-material */}
+            {/* <TextFieldPassword label={t("password.confirm")} /> TODO: ??? setPassword={setConfirmPassword} */}
+            <TextField label={t("password.confirm")} type="password" fullWidth />
           </Grid>
 
           <Grid item>
