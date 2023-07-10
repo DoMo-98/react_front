@@ -6,6 +6,10 @@ This project was bootstrapped with [Vite](https://github.com/vitejs/vite/tree/ma
 
 In the project directory, you can run:
 
+### `npm install`
+
+and
+
 ### `npm start` or `npx vite` or `npm run dev`
 
 Runs the app in the development mode.\
